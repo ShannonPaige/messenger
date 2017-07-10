@@ -1,24 +1,34 @@
-# README
+# Messenger
+---
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Messenger is simple messenger web app that allows two users to send short text messages to each other, like Facebook Messages app or Google Chat.
+- It's possible to type a short message and have it sent to another user
+- It's possible to see messages sent from another user appear reasonably soon after they were sent
 
-Things you may want to cover:
+## Implementation details
 
-* Ruby version
+#### Tools:
+- Rails
+- PostgreSQL
+- RSPEC
 
-* System dependencies
+#### Tests
 
-* Configuration
+## Design Overview
 
-* Database creation
+#### Real time communication
+I began this challenge by researching Action Cable, a feature that released with Rails 5 that integrates Web Sockets into a Rails app. I have never used it before, but had heard about its capabilities and thought it might be the best solution. 
 
-* Database initialization
+#### Database
 
-* How to run the test suite
+## Limitations
 
-* Services (job queues, cache servers, search engines, etc.)
+## Edge Cases
 
-* Deployment instructions
+## Features to Add
 
-* ...
+## To Run Anagrams-Shannon-Paige
+### Locally
+
+
+### On Heroku
