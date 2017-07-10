@@ -1,2 +1,8 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1>Welcome <%= @user.name %></h1>
+
+<h3>Who do you want to message?</h3>
+<ul>
+  <% @otherUsers.each do |otherUser| %>
+    <li><%= otherUser.name %></li>
+  <% end %>
+</ul>
