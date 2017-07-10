@@ -1,0 +1,4 @@
+<h1><%= "Messages between #{@sender.name} and #{@receiver.name}" %></h1>
+<% @messages.each do |message| %>
+  <li><%= message.body %></li>
+<% end %>
