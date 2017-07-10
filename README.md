@@ -17,9 +17,12 @@ Messenger is simple messenger web app that allows two users to send short text m
 ## Design Overview
 
 #### Real time communication
-I began this challenge by researching Action Cable, a feature that released with Rails 5 that integrates Web Sockets into a Rails app. I have never used it before, but had heard about its capabilities and thought it might be the best solution. 
+- I began this challenge by researching Action Cable, a feature that released with Rails 5 that integrates Web Sockets into a Rails app. I have never used it before, but had heard about its capabilities and thought it might be the best solution.
 
 #### Database
+- Next I drew out the database schema on paper. I knew that there would need to be Users and Messages, so I decided to start with those two models as my MVP. A user has many messages and each message belongs to 2 users.
+- Since the spec said not to worry about users, I seeded the database with 3 users.
+
 
 ## Limitations
 
