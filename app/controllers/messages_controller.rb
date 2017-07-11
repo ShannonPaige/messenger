@@ -13,9 +13,9 @@ class MessagesController < ApplicationController
     message = Message.new(body: params[:message][:body], sender_id: current_user.id, receiver_id: params[:message][:receiver_id])
     if message.save
       ActionCable.server.broadcast 'messages',
-        body: message.body
-      head :ok
+        body: message.body,
+        name: message.sender.name,
+        time: message.created_at.strftime("%b %d, %Y - %l:%M%P")
     end
-    # redirect_to controller: 'messages', action: 'index', id: params[:message][:receiver_id]
   end
 end
