@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: messenger_production
-  username: messenger
+  database: d6ig05smp9j8bf
+  username: fntixdmxzezgcb
   password: <%= ENV['MESSENGER_DATABASE_PASSWORD'] %>
