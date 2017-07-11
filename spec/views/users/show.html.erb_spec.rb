@@ -32,7 +32,7 @@ RSpec.describe "users/show.html.erb", type: :view do
     visit "/users/#{@aliceID}"
 
     assert page.has_content?("Unauthorized to visit this page")
-    assert_equal login_path, current_path
+    assert_equal root_path, current_path
   end
 
 end

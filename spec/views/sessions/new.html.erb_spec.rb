@@ -25,6 +25,6 @@ RSpec.describe "sessions/new.html.erb", type: :view do
     click_button "Login"
 
     assert page.has_content?("Invalid login credentials.")
-    assert_equal login_path, current_path
+    assert_equal root_path, current_path
   end
 end
