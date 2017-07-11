@@ -36,6 +36,7 @@ Messenger is a simple messenger web app that allows two users to send short text
 - Instead of giving a user a list of all other users, let them search for members and add them to a favorites list
 - Highlight which conversations have new messages waiting
 - Indicate which users are currently online
+- Allow users to message more than one person at a time
 
 ## To Run Messenger
 ### Locally
