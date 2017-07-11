@@ -4,7 +4,7 @@ https://messenger-shannon-paige.herokuapp.com/
 
 ![](https://dl.dropboxusercontent.com/u/4260734/messenger.png)
 
-Messenger is simple messenger web app that allows two users to send short text messages to each other, like Facebook Messages app or Google Chat.
+Messenger is a simple messenger web app that allows two users to send short text messages to each other, like Facebook Messages app or Google Chat.
 - It's possible to type a short message and have it sent to another user
 - It's possible to see messages sent from another user appear reasonably soon after they were sent
 
