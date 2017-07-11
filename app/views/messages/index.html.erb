@@ -1,4 +1,5 @@
 <h1><%= "Messages between #{current_user.name} and #{@receiver.name}" %></h1>
+
 <h2>Post New Message</h3>
 <%= form_for :message, url: messages_path do |f| %>
   <%= f.text_field :body, class: "form-control", id: 'message-field' %>
@@ -7,16 +8,9 @@
 <% end %>
 
 <h2>Messages</h3>
-
-<% if @messages %>
-  <div id="messages">
-    <% @messages.each do |message| %>
-      <h3><%= message.body %></h3>
-      <p><%= "Posted by #{message.sender.name} on #{message.created_at.strftime("%b %d, %Y - %l:%M%P")}"%>
-    <% end %>
-  </div>
-<% else %>
-  <div id="messages">
-    <p>Start a conversation!</p>
-  </div>
-<% end %>
+<div id="messages">
+  <% @messages.each do |message| %>
+    <h3><%= message.body %></h3>
+    <p><%= "Posted by #{message.sender.name} on #{message.created_at.strftime("%b %d, %Y - %l:%M%P")}"%>
+  <% end %>
+</div>

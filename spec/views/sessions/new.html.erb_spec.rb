@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe "sessions/new.html.erb", type: :view do
   it "allows a user to get to login page" do
     visit '/'
-    expect(page).to have_content 'Login to Messenger'
     expect(page).to have_button 'Login'
   end
 
@@ -24,7 +23,6 @@ RSpec.describe "sessions/new.html.erb", type: :view do
     fill_in "Password", with: "wrongPassword"
     click_button "Login"
 
-    assert page.has_content?("Invalid login credentials.")
     assert_equal root_path, current_path
   end
 end

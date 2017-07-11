@@ -1,11 +1,12 @@
 class MessagesController < ApplicationController
   def index
-    if params[:id]
-      receiver_id = params[:id].to_i
-      @receiver = User.find(receiver_id)
-      @messages = Message.get_messages(current_user.id, receiver_id)
-    else
+    if params[:id] && current_user
+      @receiver = User.find(params[:id])
+      @messages = Message.get_messages(current_user.id, params[:id])
+    elsif current_user
       redirect_to user_path(current_user)
+    else
+      redirect_to root_path
     end
   end
 

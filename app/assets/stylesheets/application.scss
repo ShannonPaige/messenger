@@ -14,3 +14,22 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+h1, a {
+  color: #F05742;
+}
+
+li {
+  font-size: 18px;
+}
+
+#intro-image {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#logo {
+  width: 50px;
+  margin-top: -12px;
+}

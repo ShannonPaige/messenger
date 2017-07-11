@@ -31,7 +31,6 @@ RSpec.describe "users/show.html.erb", type: :view do
   it "does not allow other users to get to a user's homepage" do
     visit "/users/#{@aliceID}"
 
-    assert page.has_content?("Unauthorized to visit this page")
     assert_equal root_path, current_path
   end
 
