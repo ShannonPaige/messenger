@@ -9,7 +9,13 @@ class SessionsController < ApplicationController
       redirect_to user_path(@user)
     else
       flash[:errors] = "Invalid login credentials."
-      redirect_to login_path
+      redirect_to root_path
     end
+  end
+
+  def destroy
+    flash[:error] = "Successfully Logged Out!"
+    session.clear
+    redirect_to root_path
   end
 end

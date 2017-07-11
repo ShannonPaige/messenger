@@ -5,7 +5,7 @@ class UsersController < ApplicationController
       @otherUsers = User.all_except(@user)
     else
       flash[:errors] = "Unauthorized to visit this page"
-      redirect_to login_path
+      redirect_to root_path
     end
   end
 end
