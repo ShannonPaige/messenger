@@ -7,7 +7,11 @@
 <% end %>
 
 <h2>Previous Messages</h3>
-<% @messages.each do |message| %>
+
+
+<div id="messages">
+  <% @messages.each do |message| %>
   <h3><%= message.body %></h3>
   <p><%= "Posted by #{message.sender.name} on #{message.created_at.strftime("%b %d, %Y - %l:%M%P")}"%>
-<% end %>
+    <% end %>
+</div>

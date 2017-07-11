@@ -10,7 +10,12 @@ class MessagesController < ApplicationController
   end
 
   def create
-    Message.create(body: params[:message][:body], sender_id: current_user.id, receiver_id: params[:message][:receiver_id])
-    redirect_to controller: 'messages', action: 'index', id: params[:message][:receiver_id]
+    message = Message.new(body: params[:message][:body], sender_id: current_user.id, receiver_id: params[:message][:receiver_id])
+    if message.save
+      ActionCable.server.broadcast 'messages',
+        body: message.body
+      head :ok
+    end
+    # redirect_to controller: 'messages', action: 'index', id: params[:message][:receiver_id]
   end
 end

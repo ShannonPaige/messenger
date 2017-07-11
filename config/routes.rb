@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  mount ActionCable.server => '/cable'
+  
   root to: 'sessions#new'
 
   get '/login', to: 'sessions#new'
